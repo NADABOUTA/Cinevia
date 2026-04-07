@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #000;
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 10px 20px;
+}
+
+.logo {
+  color: red;
+}
+
+.navbar nav a {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navbar input {
+  padding: 5px;
+  border-radius: 20px;
+  border: none;
+}
+
+/* HERO */
+.hero {
+  background: url('images/image1.png') center/cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+}
+
+.overlay button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+/* FILTER */
+.filters {
+  text-align: center;
+  margin: 20px;
+}
+
+.filters button {
+  background: transparent;
+  border: 1px solid red;
+  color: red;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 20px;
+}
+
+.filters .active {
+  background: red;
+  color: white;
+}
+
+/* MOVIES */
+.movies {
+  padding: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #111;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+  padding: 10px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h3 {
+  font-size: 14px;
+}
+
+.card p {
+  color: #aaa;
+}
+
+.card a {
+  background: red;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.modal{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    max-width: 800px;
+    margin: 100px auto;
+
+    background: rgb(189, 187, 187);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.imag img{
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 100px;
+}
+
+.modal-content{
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+.modal-content h2{
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.modal-content p{
+    font-size: 14px;
+    line-height: 1.6;
+}
+.modal-content a{
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: transparent;
+    border: 1px solid red;
+    text-decoration: none;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+
+}
+
+.btn-fav{
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: red;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.btn-fav1:hover{
+    background: rgb(255, 0, 0);
+}
+a.btn-fav{
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  margin-top: 20px;
+}

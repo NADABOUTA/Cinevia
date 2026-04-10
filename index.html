@@ -5,88 +5,82 @@
   <title>Cinévia</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-  <h2 class="logo">Cinévia</h2>
-  <nav>
-    <a href="#hero">Accueil</a>
-    <a href="#movies">Films</a>
-    <a href="#favoris">Favoris</a>
-  </nav>
-  <input type="text" placeholder="Recherche...">
-</header>
+  <!-- Navbar -->
+  <header class="navbar">
+    <h2 class="logo">Cinévia</h2>
+    <nav>
+      <a href="#hero">Accueil</a>
+      <a href="#movies">Films</a>
+      <a href="#favoris">Favoris</a>
+    </nav>
+    <input type="text" placeholder="Recherche...">
+  </header>
 
-<!-- HERO -->
-<section id="hero" class="hero">
-  <div class="overlay">
-    <h1>Bienvenue sur Cinévia</h1>
-    <p>Découvre les meilleurs films</p>
-    <button>Choisir Film</button>
-  </div>
-</section>
-
-<!-- FILTER -->
-<div  class="filters">
-  <button class="active">Tous</button>
-  <button>Action</button>
-  <button>Comédie</button>
-  <button>Drama</button>
-</div>
-
-<!-- SECTION ACTION -->
-<section id="movies" class="movies">
-  <h2>Action</h2>
-  <div class="cards">
-
-    <div class="card">
-      <img src="images/FILM3.jfif">
-      <h3>La casa de papel</h3>
-      <p>Mes Favoris</p>
-      <a href="Detail.html">Voir plus</a>
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="overlay">
+      <h1>Bienvenue sur Cinévia</h1>
+      <p>Découvre les meilleurs films</p>
+      <a href="#movies">Choisir Film</a>
     </div>
+  </section>
 
-    <div class="card">
-      <img src="images/film1.jpg">
-      <h3>Dune</h3>
-      <p>Mes Favoris</p>
-      <a href="Detail.html">Voir plus</a>
-    </div>
-
-    
-
+  <!-- Filtres -->
+  <div class="filters">
+    <button class="active" data-filter="tous">Tous</button>
+    <button data-filter="action">Action</button>
+    <button data-filter="drama">Drama</button>
   </div>
-</section>
 
-<!-- DRAMA -->
-<section class="movies">
-  <h2>Drama</h2>
-  <div class="cards">
-    <div class="card">
-      <img src="images/film1.jpg">
-      <h3>La casa de papel</h3>
-      <p>Mes Favoris</p>
-      <a href="Detail.html">Voir plus</a>
-    </div>
-  </div>
-</section>
+  <!-- Section Action -->
+  <section id="movies" class="movies" data-section="action">
+    <h2>Action</h2>
+    <div class="cards" id="action-container"></div>
+  </section>
 
-<!-- FAVORIS -->
-<section id="favoris" class="movies">
-  <h2>⭐ Mes Favoris</h2>
-  <div class="cards">
-    <div class="card small">
-      <img src="images/FILM 5.webp">
-      <h3>La casa de papel</h3>
-      <a href="#">Supprimer</a>
+  <!-- Section Drama -->
+  <section class="movies" data-section="drama">
+    <h2>Drama</h2>
+    <div class="cards" id="drama-container"></div>
+  </section>
+
+  <!-- Favoris -->
+  <section id="favoris" class="movies">
+    <h2>⭐ Mes Favoris</h2>
+    <div class="cards" id="favoris-container"></div>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+
+      <span id="close-modal">X</span>
+
+      <img id="modal-img" alt="movie">
+
+      <div class="modal-info">
+
+        <div class="modal-top">
+          <h2 id="modal-title"></h2>
+          <span id="modal-cat"></span>
+          <p id="modal-desc"></p>
+        </div>
+
+        <div class="modal-bottom">
+          <button class="btn-fav-modal" id="modal-btn-fav">
+            ♥ Ajouter aux favoris
+          </button>
+        </div>
+
+      </div>
     </div>
   </div>
-</section>
 
-<footer>
-  © 2026 Cinévia - Tous droits réservés
-</footer>
+  <footer>© 2026 Cinévia</footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
